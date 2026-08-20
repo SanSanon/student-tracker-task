@@ -11,8 +11,9 @@ while True:
         tasks.append(task)
     elif choice == "2":
         print("Tasks:")
-        for task in tasks:
-            print(task)
-    if choice == "3":
+        for index, task in enumerate(tasks, start=1):
+          print(f"{index}. {task}")
+        if not tasks:
+          print("No tasks found.")
+    elif choice == "3":
       break
-    
